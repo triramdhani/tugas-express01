@@ -1,0 +1,2 @@
+buat dua api endpoint get and post for biodata
+buat configurasi dot env
