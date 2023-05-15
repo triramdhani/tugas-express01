@@ -10,10 +10,10 @@ const corsOption = require('./config/corsOption')
 
 const port = process.env.PORT ||
 
-app.use(logEvent)
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-app.use(cors(corsOption))
+app.use(logEvent) // middleware for logger
+app.use(express.json()) //middleware for parsing json
+app.use(express.urlencoded({extended: true})) 
+app.use(cors(corsOption)) //middleware for cors policy
 
 app.use('/biodata', RouterBiodata)
 
