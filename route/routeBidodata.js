@@ -18,7 +18,7 @@ RouterBiodata.get('/', (req,res)=> {
 
 RouterBiodata.post('/', (req,res)=>{
     console.log(req.body)
-    const nama = req.body.name
+    const nama = req.body.nama
     const tempatLahir = req.body.tempatLahir
     const tanggalLahir = req.body.tanggalLahir
     const alamat = req.body.alamat
