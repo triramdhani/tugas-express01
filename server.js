@@ -9,8 +9,10 @@ const logEvent = require('./middleware/logEvent')
 
 
 app.use(logEvent)
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+app.use('/biodata', RouterBiodata)
 
-app.use('/biodata/', RouterBiodata)
 app.get('/', (req,res)=> {
     res.send('server running on port 3500')
 })
