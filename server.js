@@ -8,7 +8,7 @@ const RouterBiodata = require('./route/routeBidodata')
 const logEvent = require('./middleware/logEvent')
 const corsOption = require('./config/corsOption')
 
-const port = process.env.PORT ||
+const port = process.env.PORT || 3500
 
 app.use(logEvent) // middleware for logger
 app.use(express.json()) //middleware for parsing json
@@ -22,6 +22,6 @@ app.get('/', (req,res)=> {
 })
 
 
-app.listen(3500 , ()=>{
+app.listen(port , ()=>{
     console.log('Server running at http://localhost:' + port)
 })
